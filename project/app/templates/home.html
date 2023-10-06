@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends './header.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+<ul class="panels">
+    <li class="assignments-box">
+
+        <ul class="assignments">
+            {% for assignment in assignments %}
+            <li class="assignment">
+                <strong>Assignment Name:</strong> {{ assignment.name }}<br>
+                <strong>Due Date:</strong> {{ assignment.dueDate }}<br>
+                <strong>Class Assigned To:</strong> {{ assignment.classAssignedTo.name }}
+                <strong>Media:</strong> <img src="{{ assignment.file }}">
+            </li>
+            {% empty %}
+            <li>No assignments found.</li>
+            {% endfor %}
+        </ul>
+
+    </li>
+    <li class="messages-box">
+        <ul class="assignments">
+            Messages
+            {% for message in messages %}
+            <li class="assignment">
+                <strong></strong> {{ message.name }}<br>
+                <strong>Sent on </strong> {{ message.created }}<br>
+                <strong>Class Assigned To:</strong> {{ message.classAssignedTo.name }}<br
+                <strong>Body: </strong> {{ message.body }}<br
+                <strong>Media: </strong> <img src="{{ message.file }}">
+            </li>
+            {% empty %}
+            <li>No messages found.</li>
+            {% endfor %}
+        </ul>
+    </li>
+    <li class="community-box">
+
+    </li>
+
+</ul>
+{% endblock %}

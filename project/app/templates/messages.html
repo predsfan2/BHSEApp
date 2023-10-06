@@ -1,0 +1,18 @@
+<h1>{{ class_site.name }}</h1>
+
+<h2>Messages</h2>
+<a href="messages/create">Compose Message</a>
+<ul>
+  {% for message in messages %}
+    <li>
+      <strong>Subject:</strong> {{ message.name }}<br>
+      <strong>From:</strong> {{ message.sender.username }}<br>
+      <strong>Recipients:</strong> {% if message.recipients.count == message.class_site.students.count %}All Participants{% else %}{{ message.recipients.all|join:', ' }}{% endif %}<br>
+      <strong>Message:</strong> {{ message.body }}<br>
+      <strong>Date:</strong> {{ message.created }}<br>
+      <strong>Class:</strong> {{ message.classAssignedTo }}
+    </li>
+  {% empty %}
+    <li>No messages.</li>
+  {% endfor %}
+</ul>

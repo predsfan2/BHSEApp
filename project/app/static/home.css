@@ -1,0 +1,22 @@
+ul.panels {
+    list-style-type: none;
+}
+li {
+    background-color: #808080;
+    border-radius: 25px;
+    margin: 10px 20px;
+    padding: 10px 20px;
+}
+li.assignments-box, li.community-box, li.messages-box{
+    float: left;
+}
+
+.assignment {
+    background-color: #CCCCCC;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    align-items: center;
+    border-radius: 25px;
+    overflow:hidden;
+}

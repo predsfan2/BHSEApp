@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Mont;
+    src: url(Mont.otf);
+}
+
+ul.header {
+    list-style-type: none;
+    display:inline-block;
+}
+nav {
+    background-color: #CCCCCC;
+    text-align: center;
+    font-size: 25px;
+    align-items: center;
+    border-radius: 25px;
+    overflow:hidden;
+}
+li.header {
+    float: left;
+
+    background-color: #808080;
+    border-radius: 25px;
+    margin: 10px 20px;
+    padding: 10px 20px;
+
+}
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 25px;
+}
+.top-header {
+    background-color: #CCCCCC;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    align-items: center;
+    border-radius: 25px;
+    overflow:hidden;
+}

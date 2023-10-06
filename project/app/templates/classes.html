@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{% extends './header.html' %}
+{% block content %}
+<h2>{{ user }}'s Classes</h2>
+    {% for class_site in classes %}
+        <a href="{{ class_site.id|lower }}"><li>{{ class_site.name }}</li></a>
+    {% endfor %}
+{% endblock %}

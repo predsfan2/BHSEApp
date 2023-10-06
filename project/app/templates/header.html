@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'header.css' %}">
+<!-- Header Menu of the Page <img src="static/images/logo.png" /> -->
+<header>
+
+    <div id="top-header">
+
+        <nav>
+            <ul class="header">
+                <li class="header"><a href="/">Home</a></li>
+                <li class="header"><a href="/classes">My Classes</a></li>
+                <li class="header"><a href="/messages">Messages</a></li>
+                <li class="header"><a href="/assignments">Assignments</a></li>
+                <li class="header"><a href="/profile">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+{% block content %}
+{% endblock %}
+</html>

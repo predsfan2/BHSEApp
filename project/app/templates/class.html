@@ -1,0 +1,6 @@
+{% for class in classes %}
+    <h3>{{ class.name }}</h3>
+    <!-- Display other class information -->
+{% empty %}
+    <p>No classes found.</p>
+{% endfor %}

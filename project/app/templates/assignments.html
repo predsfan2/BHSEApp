@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends './header.html' %}
+{% block content %}
+<h2>Your Assignments</h2>
+<ul>
+  {% for assignment in assignments %}
+    <li>
+      <strong>Assignment Name:</strong> {{ assignment.name }}<br>
+      <strong>Due Date:</strong> {{ assignment.dueDate }}<br>
+      <strong>Class Assigned To:</strong> {{ assignment.classAssignedTo.name }}
+      <strong>Media:</strong> <img src="{{ assignment.file }}">
+    </li>
+  {% empty %}
+    <li>No assignments found.</li>
+  {% endfor %}
+</ul>
+
+
+
+{% endblock %}

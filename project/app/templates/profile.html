@@ -1,0 +1,9 @@
+<h1>Profile Details</h1>
+<img src='{{ profile.profile_pic }}'>
+<p>Username: {{ profile.user.username }}</p>
+<p>Bio:</p>
+<p>{{ profile.bio }}</p>
+<p>Classes In:</p>
+{% for class in profile.classes_as_student.all %}
+<p>{{ class.name }}</p>
+{% endfor %}
