@@ -37,7 +37,20 @@
         </ul>
     </li>
     <li class="community-box">
-
+            <ul class="post">
+                Posts
+                {% for post in posts %}
+                <li class="assignment">
+                    <strong></strong> {{ post.name }}<br>
+                    <strong>Sent on </strong> {{ post.created }}<br>
+                    <strong>Class Assigned To:</strong> {{ post.classAssignedTo.name }}<br>
+                    <strong>Body: </strong> {{ post.body }}<br>
+                    <strong>Media: </strong> <img src="{{ post.file }}">
+                </li>
+                {% empty %}
+                <li>No posts found.</li>
+                {% endfor %}
+            </ul>
     </li>
 
 </ul>

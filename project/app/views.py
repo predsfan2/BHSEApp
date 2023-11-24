@@ -15,7 +15,8 @@ def home(request):
     user_classes = ClassSites.objects.filter(students=request.user.profile)
     assignments = Assignment.objects.filter(classAssignedTo__in=user_classes, classAssignedTo__isnull=False)
     messages = request.user.messages.all()
-    return render(request, "home.html", {"profile": request.user, 'assignments': assignments, 'messages': messages})
+    community = 0
+    return render(request, "home.html", {"profile": request.user, 'assignments': assignments, 'messages': messages, 'community': community})
 
 
 @login_required
